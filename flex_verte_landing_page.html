@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flex Verte | Custom 3D-Scanned Orthopedic Spinal Support</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#f0f9ff',
+              100: '#e0f2fe',
+              500: '#0ea5e9',
+              600: '#0284c7',
+              700: '#0369a1',
+              accent: '#06b6d4',
+              dark: '#0f172a',
+              card: '#1e293b'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* Custom subtle grid background for medical-tech feel */
+    .tech-grid {
+      background-size: 32px 32px;
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+    }
+    .glow-cyan {
+      box-shadow: 0 0 35px -5px rgba(6, 182, 212, 0.25);
+    }
+  </style>
+</head>
+
+<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-cyan-500 selection:text-slate-950">
+
+  <!-- ================= NAVIGATION ================= -->
+  <nav class="sticky top-0 z-50 backdrop-blur-md bg-slate-950/80 border-b border-slate-800/80 transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Logo & Wordmark -->
+      <a href="#" class="flex items-center space-x-3 group">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-cyan-500 to-sky-500 p-0.5 shadow-md shadow-cyan-500/20 group-hover:scale-105 transition-transform duration-200">
+          <div class="w-full h-full bg-slate-950 rounded-[10px] flex items-center justify-center">
+            <!-- Spine-Segment Abstract SVG -->
+            <svg class="w-5 h-5 text-cyan-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2v20M8 5h8M7 9h10M6 13h12M7 17h10M9 21h6"/>
+            </svg>
+          </div>
+        </div>
+        <div>
+          <span class="text-xl font-bold tracking-tight text-white block">Flex Verte</span>
+          <span class="text-[10px] uppercase tracking-widest text-cyan-400 font-semibold block -mt-0.5">Engineered Alignment</span>
+        </div>
+      </a>
+
+      <!-- Quick Links & Pilot CTA -->
+      <div class="flex items-center space-x-6">
+        <div class="hidden md:flex items-center space-x-6 text-sm text-slate-400 font-medium">
+          <a href="#comparison" class="hover:text-cyan-400 transition-colors">The Difference</a>
+          <a href="#features" class="hover:text-cyan-400 transition-colors">Technology</a>
+          <a href="#how-it-works" class="hover:text-cyan-400 transition-colors">Process</a>
+        </div>
+        <a href="#waitlist-section" class="inline-flex items-center justify-center px-4 py-2.5 text-xs sm:text-sm font-semibold rounded-lg bg-gradient-to-r from-sky-500 to-cyan-400 text-slate-950 hover:from-sky-400 hover:to-cyan-300 shadow-lg shadow-cyan-500/20 transition-all duration-200 active:scale-95">
+          Join Pilot Waitlist
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ================= HERO SECTION ================= -->
+  <section class="relative tech-grid pt-12 pb-20 lg:pt-24 lg:pb-32 overflow-hidden border-b border-slate-900">
+    <!-- Ambient Radial Glows -->
+    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-cyan-500/10 rounded-full blur-[120px] pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="max-w-3xl mx-auto text-center space-y-6">
+        
+        <!-- Clinical Badge -->
+        <div class="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full bg-slate-900 border border-slate-800 text-cyan-400 text-xs font-semibold tracking-wide">
+          <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+          <span>Next-Gen Orthotics for Knowledge Workers</span>
+        </div>
+
+        <!-- Headline -->
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.15]">
+          Clinical Spinal Support That <span class="bg-gradient-to-r from-cyan-400 via-sky-400 to-teal-300 bg-clip-text text-transparent">Disappears Under Your Clothes.</span>
+        </h1>
+
+        <!-- Subheadline -->
+        <p class="text-base sm:text-lg text-slate-400 leading-relaxed max-w-2xl mx-auto font-normal">
+          Custom 3D-scanned anatomical alignment engineered for all-day desk comfort without the sweat, pinching, or bulk of rigid legacy braces.
+        </p>
+
+        <!-- CTA Action Buttons -->
+        <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="#waitlist-section" class="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-gradient-to-r from-cyan-400 to-sky-500 text-slate-950 font-bold text-sm tracking-wide shadow-xl shadow-cyan-500/20 hover:brightness-110 active:scale-98 transition-all duration-200">
+            Request Priority 3D Scan &rarr;
+          </a>
+          <a href="#comparison" class="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-800 text-slate-300 font-semibold text-sm transition-all duration-200">
+            View Material Breakdown
+          </a>
+        </div>
+
+        <!-- Metric micro-badges -->
+        <div class="pt-6 grid grid-cols-3 gap-3 max-w-md mx-auto text-center border-t border-slate-900">
+          <div>
+            <div class="text-lg font-bold text-white">&lt;3.5 mm</div>
+            <div class="text-[11px] text-slate-400 uppercase tracking-wider">Ultra-Thin Shell</div>
+          </div>
+          <div>
+            <div class="text-lg font-bold text-cyan-400">100%</div>
+            <div class="text-[11px] text-slate-400 uppercase tracking-wider">3D Scan Custom</div>
+          </div>
+          <div>
+            <div class="text-lg font-bold text-white">5 Days</div>
+            <div class="text-[11px] text-slate-400 uppercase tracking-wider">Scan-To-Wear</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= INTERACTIVE COMPARISON SECTION ================= -->
+  <section id="comparison" class="py-20 bg-slate-900/60 border-b border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <h2 class="text-xs uppercase tracking-widest text-cyan-400 font-semibold">The Ergonomic Leap</h2>
+        <p class="text-3xl font-bold text-white mt-2">Why Standard Braces Fail at the Desk</p>
+        <p class="text-slate-400 text-sm mt-3">Off-the-shelf plastic orthotics are designed for immobilization, not the dynamic ergonomics of seated work.</p>
+      </div>
+
+      <!-- Comparative Side-by-Side Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto items-stretch">
+        
+        <!-- Legacy Card -->
+        <div class="rounded-2xl p-6 sm:p-8 bg-slate-950/80 border border-rose-950/50 shadow-md relative flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-semibold px-2.5 py-1 rounded bg-rose-950/60 text-rose-300 border border-rose-800/40 uppercase tracking-wider">Legacy Medical Braces</span>
+              <span class="text-xs text-slate-400">Plaster / Off-The-Shelf</span>
+            </div>
+            <h3 class="text-xl font-bold text-slate-300">Traditional Rigid TLSO Orthotics</h3>
+            
+            <ul class="mt-6 space-y-4 text-sm text-slate-400">
+              <li class="flex items-start space-x-3">
+                <span class="text-rose-400 font-bold mt-0.5">&#10005;</span>
+                <span><strong>Bulky & Protruding:</strong> 8mm–12mm profile that bulges noticeably through work shirts and blazers.</span>
+              </li>
+              <li class="flex items-start space-x-3">
+                <span class="text-rose-400 font-bold mt-0.5">&#10005;</span>
+                <span><strong>Heat & Sweat Trap:</strong> Solid, unventilated walls induce heavy perspiration within 45 minutes of desk work.</span>
+              </li>
+              <li class="flex items-start space-x-3">
+                <span class="text-rose-400 font-bold mt-0.5">&#10005;</span>
+                <span><strong>Hip & Rib Pinching:</strong> Standard sizing cuts into the iliac crest and ribs when seated in ergonomic chairs.</span>
+              </li>
+              <li class="flex items-start space-x-3">
+                <span class="text-rose-400 font-bold mt-0.5">&#10005;</span>
+                <span><strong>3–4 Week Lag:</strong> Messy plaster casting routines take almost a month to fabricate.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="mt-8 pt-4 border-t border-slate-900 text-xs text-slate-400 font-medium text-center">
+            Result: Low compliance, abandoned in closets after 2 weeks.
+          </div>
+        </div>
+
+        <!-- Flex Verte Card -->
+        <div class="rounded-2xl p-6 sm:p-8 bg-gradient-to-b from-slate-900 via-slate-900/90 to-slate-950 border-2 border-cyan-500/50 glow-cyan relative flex flex-col justify-between">
+          <div class="absolute -top-3 right-6 bg-gradient-to-r from-cyan-400 to-sky-500 text-slate-950 text-[11px] font-extrabold uppercase px-3 py-0.5 rounded-full shadow">
+            The Flex Verte Standard
+          </div>
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-semibold px-2.5 py-1 rounded bg-cyan-950/80 text-cyan-300 border border-cyan-800/60 uppercase tracking-wider">3D Digital Fabrication</span>
+              <span class="text-xs text-cyan-400 font-medium">Bespoke Fit</span>
+            </div>
+            <h3 class="text-xl font-bold text-white">Flex Verte Low-Profile Copolymer</h3>
+            
+            <ul class="mt-6 space-y-4 text-sm text-slate-300">
+              <li class="flex items-start space-x-3">
+                <span class="text-cyan-400 font-bold mt-0.5">&#10003;</span>
+                <span><strong>Sub-4mm Invisible Shell:</strong> Flushes directly along your unique spinal contours for undetectable wear under tailored apparel.</span>
+              </li>
+              <li class="flex items-start space-x-3">
+                <span class="text-cyan-400 font-bold mt-0.5">&#10003;</span>
+                <span><strong>Laser-Engineered Airflow:</strong> Precision ventilation grid paired with antimicrobial Gehring-Tricot spacer mesh dissipates body heat.</span>
+              </li>
+              <li class="flex items-start space-x-3">
+                <span class="text-cyan-400 font-bold mt-0.5">&#10003;</span>
+                <span><strong>Dynamic Seated De-loading:</strong> Selectively stiffened along thoracic-lumbar junctions to halt forward hunching while preserving hip mobility.</span>
+              </li>
+              <li class="flex items-start space-x-3">
+                <span class="text-cyan-400 font-bold mt-0.5">&#10003;</span>
+                <span><strong>Rapid 5-Day Delivery:</strong> Non-invasive 3D optical scan converted to CAM mold in under 24 hours.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="mt-8 pt-4 border-t border-slate-800/80 text-xs text-cyan-300 font-medium text-center">
+            Result: Daily comfort, active posture correction, all-day compliance.
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= 3 CORE FEATURES ================= -->
+  <section id="features" class="py-20 lg:py-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-2xl mx-auto mb-16">
+      <h2 class="text-xs uppercase tracking-widest text-cyan-400 font-semibold">Engineered Precision</h2>
+      <p class="text-3xl font-bold text-white mt-2">Designed Around the Biology of Desk Work</p>
+      <p class="text-slate-400 text-sm mt-3">Combining medical-grade polymers with aerospace-grade CAD rectification.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      
+      <!-- Feature 1 -->
+      <div class="p-8 rounded-2xl bg-slate-900 border border-slate-800 hover:border-slate-700 transition-all duration-200 group">
+        <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 group-hover:scale-110 transition-transform mb-6">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path>
+          </svg>
+        </div>
+        <h3 class="text-lg font-bold text-white mb-2">Sub-Millimeter 3D Scan Precision</h3>
+        <p class="text-slate-400 text-sm leading-relaxed">
+          We capture your spine’s natural curvature using high-resolution structured-light optical scanning—eliminating painful pressure zones, slipping, and archaic plaster molds.
+        </p>
+      </div>
+
+      <!-- Feature 2 -->
+      <div class="p-8 rounded-2xl bg-slate-900 border border-slate-800 hover:border-slate-700 transition-all duration-200 group">
+        <div class="w-12 h-12 rounded-xl bg-sky-500/10 border border-sky-500/30 flex items-center justify-center text-sky-400 group-hover:scale-110 transition-transform mb-6">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+          </svg>
+        </div>
+        <h3 class="text-lg font-bold text-white mb-2">Invisible Sub-4mm Profile</h3>
+        <p class="text-slate-400 text-sm leading-relaxed">
+          Engineered using SIMONA medical copolymer sheets heated and vacuum-molded down to 3.2mm. Sits flush beneath button-downs, blouses, and tailoring with zero visible bulk.
+        </p>
+      </div>
+
+      <!-- Feature 3 -->
+      <div class="p-8 rounded-2xl bg-slate-900 border border-slate-800 hover:border-slate-700 transition-all duration-200 group">
+        <div class="w-12 h-12 rounded-xl bg-teal-500/10 border border-teal-500/30 flex items-center justify-center text-teal-400 group-hover:scale-110 transition-transform mb-6">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+          </svg>
+        </div>
+        <h3 class="text-lg font-bold text-white mb-2">Dynamic Seated De-loading</h3>
+        <p class="text-slate-400 text-sm leading-relaxed">
+          Provides targeted lumbar arch stabilization while freeing the thoracic diaphragm. Unloads compressive disc pressure during long 8+ hour sedentary knowledge work sessions.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= HOW IT WORKS (3 STEPS) ================= -->
+  <section id="how-it-works" class="py-20 bg-slate-900/40 border-t border-b border-slate-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <h2 class="text-xs uppercase tracking-widest text-cyan-400 font-semibold">Frictionless Journey</h2>
+        <p class="text-3xl font-bold text-white mt-2">How Flex Verte Works</p>
+        <p class="text-slate-400 text-sm mt-3">From optical scan to everyday seated relief in 5 business days.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+        
+        <!-- Step 1 -->
+        <div class="relative bg-slate-950 p-7 rounded-2xl border border-slate-800/80 flex flex-col justify-between">
+          <div>
+            <div class="w-8 h-8 rounded-full bg-cyan-500/20 text-cyan-400 border border-cyan-500/40 font-bold flex items-center justify-center text-sm mb-4">
+              01
+            </div>
+            <h4 class="text-lg font-bold text-white mb-2">5-Minute Optical Scan</h4>
+            <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">
+              A certified specialist completes a zero-contact, non-invasive structured-light 3D scan of your back and pelvic alignment while seated and standing.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-900 text-xs text-cyan-400/80 font-mono">
+            Zero messy plaster &bull; Instant 3D mesh
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="relative bg-slate-950 p-7 rounded-2xl border border-slate-800/80 flex flex-col justify-between">
+          <div>
+            <div class="w-8 h-8 rounded-full bg-cyan-500/20 text-cyan-400 border border-cyan-500/40 font-bold flex items-center justify-center text-sm mb-4">
+              02
+            </div>
+            <h4 class="text-lg font-bold text-white mb-2">CAD & Thermoforming</h4>
+            <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">
+              Your anatomical model is rectified in orthotic CAD software. High-density positive molds are cut and draped with oven-heated medical copolymer sheets.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-900 text-xs text-cyan-400/80 font-mono">
+            Custom trim lines &bull; Laser airflow matrix
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="relative bg-slate-950 p-7 rounded-2xl border border-slate-800/80 flex flex-col justify-between">
+          <div>
+            <div class="w-8 h-8 rounded-full bg-cyan-500/20 text-cyan-400 border border-cyan-500/40 font-bold flex items-center justify-center text-sm mb-4">
+              03
+            </div>
+            <h4 class="text-lg font-bold text-white mb-2">Clinical Fit & Relief</h4>
+            <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">
+              Within 5 days, your finished brace is riveted with breathable pads and tension fasteners. Verified in real-time under desk sitting load for instant pain de-loading.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-900 text-xs text-cyan-400/80 font-mono">
+            5-day delivery &bull; Real-time micro-adjustment
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= WAITLIST & HYPOTHESIS TEST FORM ================= -->
+  <section id="waitlist-section" class="py-20 lg:py-28 tech-grid relative">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <div class="text-center mb-10">
+        <span class="text-xs uppercase tracking-widest text-cyan-400 font-semibold">Priority Pilot Program</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-2">Reserve Your 3D Scan Fitting</h2>
+        <p class="text-slate-400 text-sm mt-3 max-w-xl mx-auto">
+          We are accepting 50 pilot participants for custom 3D scans and trial orthotic fittings. Help us validate your comfort profile and receive prioritized onboarding.
+        </p>
+      </div>
+
+      <!-- Lead Capture Form Card -->
+      <div class="bg-slate-900/90 border border-slate-800 rounded-3xl p-6 sm:p-10 shadow-2xl backdrop-blur-xl relative overflow-hidden">
+        
+        <form id="pilotWaitlistForm" class="space-y-6" onsubmit="handleWaitlistSubmit(event)">
+          
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <!-- Full Name -->
+            <div>
+              <label for="fullName" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Full Name</label>
+              <input type="text" id="fullName" required placeholder="e.g. Alex Morgan"
+                class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-white placeholder-slate-500 text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all" />
+            </div>
+
+            <!-- Email -->
+            <div>
+              <label for="workEmail" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Work or Personal Email</label>
+              <input type="email" id="workEmail" required placeholder="alex@company.com"
+                class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-white placeholder-slate-500 text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all" />
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <!-- Occupation -->
+            <div>
+              <label for="occupation" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Occupation / Field</label>
+              <input type="text" id="occupation" required placeholder="e.g. Software Engineer, Finance, Legal"
+                class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-white placeholder-slate-500 text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all" />
+            </div>
+
+            <!-- Primary Discomfort Area -->
+            <div>
+              <label for="painArea" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Primary Pain / Discomfort Area</label>
+              <select id="painArea" required
+                class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-white text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all">
+                <option value="" disabled selected>Select your primary area...</option>
+                <option value="Lower Back / Lumbar Compression">Lower Back / Lumbar Compression</option>
+                <option value="Upper Back / Thoracic Slumping">Upper Back / Thoracic Slumping</option>
+                <option value="Forward Head & Posture Fatigue">Forward Head & Posture Fatigue</option>
+                <option value="Sciatic Pinching During Seated Work">Sciatic Pinching During Seated Work</option>
+                <option value="General Preventative Support">General Preventative Ergonomics</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Hours Seated Daily Slider -->
+          <div class="pt-2">
+            <div class="flex items-center justify-between mb-2">
+              <label for="hoursSlider" class="text-xs font-semibold text-slate-300 uppercase tracking-wider">Average Seated Desk Hours Per Day</label>
+              <span id="sliderOutput" class="text-sm font-bold text-cyan-400 bg-cyan-950/60 border border-cyan-800/60 px-2.5 py-0.5 rounded">8 Hours/Day</span>
+            </div>
+            <input type="range" id="hoursSlider" min="4" max="14" value="8" step="1"
+              oninput="document.getElementById('sliderOutput').innerText = this.value + ' Hours/Day'"
+              class="w-full h-2 bg-slate-950 rounded-lg appearance-none cursor-pointer accent-cyan-400" />
+            <div class="flex justify-between text-[11px] text-slate-400 mt-1">
+              <span>4 hrs</span>
+              <span>8 hrs</span>
+              <span>12+ hrs</span>
+            </div>
+          </div>
+
+          <!-- Pilot Fitting Checkbox -->
+          <div class="pt-2 flex items-start space-x-3 bg-slate-950/60 p-4 rounded-xl border border-slate-800/80">
+            <input type="checkbox" id="pilotConsent" checked
+              class="mt-1 h-4 w-4 rounded border-slate-800 text-cyan-500 focus:ring-cyan-400 bg-slate-900" />
+            <label for="pilotConsent" class="text-xs text-slate-300 leading-relaxed cursor-pointer">
+              <strong>Apply for Priority Clinical Fitting:</strong> I am interested in testing an individualized 3D-scanned brace under our initial pilot study evaluation ($575 estimated value).
+            </label>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" id="submitBtn"
+            class="w-full py-4 rounded-xl bg-gradient-to-r from-cyan-400 via-sky-500 to-cyan-500 text-slate-950 font-bold text-sm tracking-wide shadow-xl shadow-cyan-500/25 hover:brightness-110 active:scale-[0.99] transition-all duration-200">
+            Reserve Priority Waitlist Spot &rarr;
+          </button>
+
+          <!-- Disclaimer / Microcopy -->
+          <p class="text-[11px] text-slate-400 text-center leading-normal">
+            Your data is strictly confidential and used only to schedule fitting allocations. No payment details required.
+          </p>
+
+        </form>
+
+        <!-- Simulated Success Confirmation Modal/State (Hidden by default) -->
+        <div id="successCard" class="hidden text-center py-6 space-y-5">
+          <div class="w-16 h-16 rounded-full bg-cyan-500/10 border-2 border-cyan-400 text-cyan-400 flex items-center justify-center mx-auto text-2xl font-bold animate-bounce">
+            &#10003;
+          </div>
+          <h3 class="text-2xl font-extrabold text-white">Pilot Application Received!</h3>
+          <p class="text-slate-300 text-sm max-w-md mx-auto">
+            Thank you, <span id="confirmedName" class="text-cyan-400 font-semibold"></span>. You’ve been placed into our clinical 3D scanning queue.
+          </p>
+          
+          <div class="inline-block px-5 py-3 rounded-2xl bg-slate-950 border border-cyan-500/30 text-center">
+            <span class="text-xs uppercase tracking-widest text-slate-400 block font-medium">Your Pilot Queue Number</span>
+            <span class="text-3xl font-black text-cyan-400 tracking-tight" id="queueNum">#047</span>
+          </div>
+
+          <div class="text-xs text-slate-400 max-w-sm mx-auto leading-relaxed">
+            A confirmation has been logged for <span id="confirmedEmail" class="text-slate-200 font-mono"></span>. We will follow up via email when scanning dates open in your regional office cluster.
+          </div>
+
+          <div class="pt-4">
+            <button onclick="resetWaitlistForm()" class="text-xs text-cyan-400 hover:text-cyan-300 underline font-medium">
+              Submit another profile or adjust details
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-slate-950 border-t border-slate-900 py-12 text-slate-400 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-slate-900">
+        
+        <div class="flex items-center space-x-3">
+          <div class="w-7 h-7 rounded-lg bg-cyan-500 flex items-center justify-center text-slate-950 font-bold text-xs">
+            FV
+          </div>
+          <span class="text-sm font-semibold text-slate-200">Flex Verte &bull; Patient-Centered Spinal Care</span>
+        </div>
+
+        <div class="flex items-center space-x-6 text-slate-400">
+          <span>Sole Proprietorship</span>
+          <span>&bull;</span>
+          <span>Victor Montgomery, Founder</span>
+          <span>&bull;</span>
+          <span>FDA Class I Device Compliance Intended</span>
+        </div>
+
+      </div>
+
+      <div class="mt-8 flex flex-col sm:flex-row items-center justify-between text-slate-400 gap-4">
+        <p>&copy; 2026 Flex Verte. All rights reserved. Custom orthotic prototypes and research models.</p>
+        <p class="text-[11px] text-slate-400">
+          Disclaimer: Information provided for prototype validation and pilot research purposes.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= CLIENT JAVASCRIPT ================= -->
+  <script>
+    function handleWaitlistSubmit(event) {
+      event.preventDefault();
+      
+      const name = document.getElementById('fullName').value.trim();
+      const email = document.getElementById('workEmail').value.trim();
+      
+      if (!name || !email) return;
+
+      // Update confirmed fields
+      document.getElementById('confirmedName').innerText = name;
+      document.getElementById('confirmedEmail').innerText = email;
+      
+      // Generate randomized pilot number between 41 and 49
+      const randomQueue = Math.floor(Math.random() * 9) + 41;
+      document.getElementById('queueNum').innerText = '#' + String(randomQueue).padStart(3, '0');
+
+      // Toggle display
+      document.getElementById('pilotWaitlistForm').classList.add('hidden');
+      document.getElementById('successCard').classList.remove('hidden');
+    }
+
+    function resetWaitlistForm() {
+      document.getElementById('pilotWaitlistForm').reset();
+      document.getElementById('sliderOutput').innerText = '8 Hours/Day';
+      document.getElementById('pilotWaitlistForm').classList.remove('hidden');
+      document.getElementById('successCard').classList.add('hidden');
+    }
+  </script>
+
+</body>
+</html>
